@@ -1,8 +1,15 @@
 h1 {
     text-align: center;
     color: #6F4E37;
-
+    font-family: "Monaco", Monaco, monospace;
+    font-weight: bold;
 }
+/*div{
+    bakground-color: #eed9c4 #5C4033;
+    width: auto;
+    height: auto;
+
+} */
 
 body{
     background-color: #eed9c4;
