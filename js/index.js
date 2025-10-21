@@ -1,3 +1,5 @@
+//============= Dog Breed API Call   ===============
+
 // API Url and API key necessary for access 
 const apiUrl = 'https://api.thedogapi.com/v1/breeds'; // Endpoint. Will return dog breed information
 const apiKey = 'live_wl6vbIHTCGrp2NzQl4unx03tEdkPD9arXg00TLSqMtvcZR4lWiim4UegJQrlesp0';
@@ -45,12 +47,38 @@ function displayDogs(dogs){
     // Add breed name
     const name = document.createElement('h3');
     name.textContent = dog.name;
+    
+    // Add temperament information
+    const fact = document.createElement('p');
+    fact.textContent = dog.temperament 
+      ? `Temperament: ${dog.temperament}`
+      : 'No temperament info available.';
+
+
+    // Add life span information
+    const life = document.createElement('p');
+    life.textContent = `Life Span: ${dog.life_span || 'Unknown'}`;
+
+    // Add breeding information
+    const bredFor = document.createElement('p');
+    bredFor.textContent = dog.bred_for 
+      ? `Bred For: ${dog.bred_for}`
+      : 'Purpose not listed.';
 
     // Add elements to the card
     card.appendChild(img);
     card.appendChild(name);
+    card.appendChild(fact);
+    card.appendChild(life);
+    card.appendChild(bredFor);
 
     // Add card to the container
     container.appendChild(card);
   });
 }
+
+
+
+
+      
+   
